@@ -1,6 +1,7 @@
 # Custom board config for taimen
 # Kernel defconfig
 TARGET_KERNEL_CONFIG := carbon_taimen_defconfig
+BOARD_KERNEL_IMAGE_NAME := Image.lz4-dtb
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
