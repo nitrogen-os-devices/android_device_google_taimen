@@ -13,7 +13,14 @@
 # limitations under the License.
 
 # Include DU common configuration
-include vendor/du/config/common_full_phone.mk
+#include vendor/du/config/common_full_phone.mk
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2880
+TARGET_SCREEN_WIDTH := 1440
+
+# Include Nitrogen common configuration
+include vendor/nitrogen/products/common.mk
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
@@ -24,11 +31,12 @@ $(call inherit-product, device/google/taimen/aosp_taimen.mk)
 
 
 # Override AOSP build properties
-PRODUCT_NAME := du_taimen
+PRODUCT_NAME := nitrogen_taimen
 PRODUCT_DEVICE := taimen
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Pixel 2 XL
 PRODUCT_MANUFACTURER := Google
+PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
